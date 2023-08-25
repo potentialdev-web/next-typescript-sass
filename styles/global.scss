@@ -1,0 +1,60 @@
+html {
+  background: $bg-light-grayish-cyan;
+}
+
+body {
+  font-family: $font;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+p, ul {
+  display: inline;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+ul {
+  li {
+    list-style-type: none;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 100%;
+  height: 140px;
+  background: url('~/images/bg-header-desktop.svg') no-repeat;
+  background-size: cover;
+
+  @media (max-width: $sm) {
+    background: url('~/images/bg-header-mobile.svg') no-repeat;
+    background-size: cover;
+  }
+}
+
+.container {
+  margin-top: -32px;
+
+  @media (min-width: $xl) {
+    padding: 0 30px;
+    width: $xl;
+  }
+
+  @media screen and (max-width: $xl - 1) and (min-width: $xs - 1) {
+    width: 90%;
+  }
+  
+  @media (max-width: $xs) {
+    padding: 0 20px;
+    max-width: $xs;
+  }
+}

@@ -1,0 +1,45 @@
+// dimension
+$xl: 1200px;
+$xd: 992px;
+$md: 768px;
+$sm: 576px;
+$xs: 375px;
+
+// font
+$font: 'Spartan', sans-serif;
+
+$weights: (
+	'medium': 500,
+	'semi-bold': 700,
+);
+
+@each $name, $weight in $weights {
+	.font-#{$name} {
+		font-weight: $weight;
+	}
+}
+
+$sizes: (
+	'normal': 14,
+	'big': 18,
+);
+
+@each $name, $size in $sizes {
+	.fontsize-#{$name} {
+		font-size: $size + px;
+	}
+}
+
+// colors
+$white: #fff;
+$black: #2f3837;
+$green: #5da4a8;
+$bg-light-grayish-cyan: hsl(180, 52%, 96%); //background
+$light-grayish-cyan: hsl(180, 31%, 95%); // (Filter Tablets)
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+:export {
+  green: $green;
+	backgroundColor: $bg-light-grayish-cyan;
+}
